@@ -10,6 +10,8 @@ import javafx.stage.Stage; // a stage is the window itself.
 
 public class MainApp extends Application {
 
+oten
+
     @Override // replacing a method that already exists"
     public void start(Stage stage) throws IOException { // application class already has a method called start(), you are writing your own version.
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fr/quentincillierre/hangman/application/game-view.fxml")); // means create an FXML loader and tell it where the UI file is.
