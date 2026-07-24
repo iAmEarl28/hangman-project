@@ -53,9 +53,13 @@ public class WordRepository {
                 Difficulty difficulty =
                         Difficulty.valueOf(parts[1].trim().toUpperCase());
 
-                String word = parts[2].trim();
+                String word = sanitizeWord(parts[2].trim());
 
                 String definition = parts[3].trim();
+
+                if (word.isEmpty()) {
+                    continue;
+                }
 
                 words.add(
                         new Word(
@@ -78,26 +82,59 @@ public class WordRepository {
 
     }
 
+    private int getTargetLength(Difficulty difficulty) {
+        return switch (difficulty) {
+            case EASY -> 4;
+            case MEDIUM -> 7;
+            case HARD -> 9;
+        };
+    }
+
+    private String sanitizeWord(String word) {
+        return word.replaceAll("[^A-Za-z]", "").toUpperCase();
+    }
+
     public Word getRandomWord(Category category,
                               Difficulty difficulty) {
 
         List<Word> filteredWords = new ArrayList<>();
+        int targetLength = getTargetLength(difficulty);
 
         for (Word word : words) {
-
-            if (word.getCategory() == category &&
-                    word.getDifficulty() == difficulty) {
-
-                filteredWords.add(word);
-
+            if (word.getCategory() != category ||
+                    word.getDifficulty() != difficulty) {
+                continue;
             }
 
+            if (targetLength > 0 && word.getWord().length() != targetLength) {
+                continue;
+            }
+
+            filteredWords.add(word);
         }
 
         if (filteredWords.isEmpty()) {
+            for (Word word : words) {
+                if (word.getCategory() == category &&
+                        word.getDifficulty() == difficulty) {
+                    filteredWords.add(word);
+                }
+            }
+        }
 
+        if (filteredWords.isEmpty()) {
+            for (Word word : words) {
+                if (word.getDifficulty() == difficulty) {
+                    if (targetLength > 0 && word.getWord().length() != targetLength) {
+                        continue;
+                    }
+                    filteredWords.add(word);
+                }
+            }
+        }
+
+        if (filteredWords.isEmpty()) {
             return null;
-
         }
 
         Random random = new Random();

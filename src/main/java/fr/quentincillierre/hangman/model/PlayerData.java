@@ -9,6 +9,7 @@ public class PlayerData {
     private Difficulty difficulty;
     private Category category;
     private String selectedCharacter;
+    private boolean started;
 
     // ===================================
     // Progress
@@ -41,6 +42,7 @@ public class PlayerData {
         diamonds = 0;
         currentStreak = 0;
         highestStreak = 0;
+        started = false;
 
         resetRound();
 
@@ -54,7 +56,7 @@ public class PlayerData {
 
         currentWord = null;
 
-        remainingAttempts = 6;
+        remainingAttempts = 10;
         remainingTime = 60;
 
         hintUsed = false;
@@ -95,6 +97,14 @@ public class PlayerData {
 
     public void setSelectedCharacter(String selectedCharacter) {
         this.selectedCharacter = selectedCharacter;
+    }
+
+    public boolean hasStarted() {
+        return started;
+    }
+
+    public void setStarted(boolean started) {
+        this.started = started;
     }
 
     // ===================================

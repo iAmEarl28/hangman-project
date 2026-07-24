@@ -12,6 +12,15 @@
 
     <children>
 
+        <Button
+                fx:id="backButton"
+                layoutX="20.0"
+                layoutY="20.0"
+                prefWidth="45.0"
+                prefHeight="35.0"
+                text="←"
+                onAction="#goBack"/>
+
         <Label
                 layoutX="325.0"
                 layoutY="120.0"

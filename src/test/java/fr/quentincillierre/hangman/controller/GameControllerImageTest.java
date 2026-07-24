@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import fr.quentincillierre.hangman.model.HangmanModel;
 import javafx.application.Platform;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -75,6 +76,19 @@ class GameControllerImageTest {
 
         Label wordLabel = (Label) getField(controller, "wordLabel");
         assertEquals("C O N C I L I A", wordLabel.getText());
+    }
+
+    @Test
+    void insufficientDiamondsAlertShouldExplainTheRequirement() throws Exception {
+        GameController controller = new GameController();
+        Method createAlert = GameController.class.getDeclaredMethod("createInsufficientDiamondsAlert");
+        createAlert.setAccessible(true);
+
+        Alert alert = (Alert) createAlert.invoke(controller);
+
+        assertEquals(Alert.AlertType.WARNING, alert.getAlertType());
+        assertEquals("Insufficient Diamonds", alert.getTitle());
+        assertTrue(alert.getContentText().contains("10 diamonds"));
     }
 
     private static void setField(Object target, String fieldName, Object value) throws Exception {
