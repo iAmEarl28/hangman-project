@@ -826,6 +826,7 @@ public class GameController {
 
     private void promptUnlockNewLevel(Difficulty newDifficulty) {
         if (rootPane == null) return;
+        overlayDismissing = false;
         String levelName = (newDifficulty == Difficulty.MEDIUM) ? "Medium Mode" : "Hard Mode";
         String unlockColor = (newDifficulty == Difficulty.MEDIUM)
             ? "linear-gradient(to bottom, #FFF9E6, #FFF0B0, #FFDFA0)"
