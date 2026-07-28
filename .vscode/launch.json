@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MainApp",
+      "request": "launch",
+      "mainClass": "fr.quentincillierre.hangman/fr.quentincillierre.hangman.application.MainApp",
+      "projectName": "hang-man"
+    },
+    {
+      "type": "java",
+      "name": "Run Hangman Cutie",
+      "request": "launch",
+      "mainClass": "fr.quentincillierre.hangman.application.MainApp",
+      "projectName": "hang-man"
+    }
+  ]
+}

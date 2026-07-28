@@ -82,11 +82,19 @@ public class WordRepository {
 
     }
 
-    private int getTargetLength(Difficulty difficulty) {
+    private int getMinLength(Difficulty difficulty) {
         return switch (difficulty) {
-            case EASY -> 4;
-            case MEDIUM -> 7;
-            case HARD -> 9;
+            case EASY -> 3;
+            case MEDIUM -> 5;
+            case HARD -> 7;
+        };
+    }
+
+    private int getMaxLength(Difficulty difficulty) {
+        return switch (difficulty) {
+            case EASY -> 5;
+            case MEDIUM -> 8;
+            case HARD -> Integer.MAX_VALUE;
         };
     }
 
@@ -94,40 +102,44 @@ public class WordRepository {
         return word.replaceAll("[^A-Za-z]", "").toUpperCase();
     }
 
-    public Word getRandomWord(Category category,
-                              Difficulty difficulty) {
+    public Word getRandomWord(Category category, Difficulty difficulty) {
+        int minLen = getMinLength(difficulty);
+        int maxLen = getMaxLength(difficulty);
 
+        // Pass 1: exact category + difficulty + length range
         List<Word> filteredWords = new ArrayList<>();
-        int targetLength = getTargetLength(difficulty);
-
         for (Word word : words) {
-            if (word.getCategory() != category ||
-                    word.getDifficulty() != difficulty) {
-                continue;
+            if (word.getCategory() != category || word.getDifficulty() != difficulty) continue;
+            int len = word.getWord().length();
+            if (len >= minLen && len <= maxLen) {
+                filteredWords.add(word);
             }
-
-            if (targetLength > 0 && word.getWord().length() != targetLength) {
-                continue;
-            }
-
-            filteredWords.add(word);
         }
 
+        // Pass 2: category + difficulty, ignore length
         if (filteredWords.isEmpty()) {
             for (Word word : words) {
-                if (word.getCategory() == category &&
-                        word.getDifficulty() == difficulty) {
+                if (word.getCategory() == category && word.getDifficulty() == difficulty) {
                     filteredWords.add(word);
                 }
             }
         }
 
+        // Pass 3: difficulty + length range, ignore category
+        if (filteredWords.isEmpty()) {
+            for (Word word : words) {
+                if (word.getDifficulty() != difficulty) continue;
+                int len = word.getWord().length();
+                if (len >= minLen && len <= maxLen) {
+                    filteredWords.add(word);
+                }
+            }
+        }
+
+        // Pass 4: difficulty only — last resort
         if (filteredWords.isEmpty()) {
             for (Word word : words) {
                 if (word.getDifficulty() == difficulty) {
-                    if (targetLength > 0 && word.getWord().length() != targetLength) {
-                        continue;
-                    }
                     filteredWords.add(word);
                 }
             }
@@ -137,12 +149,7 @@ public class WordRepository {
             return null;
         }
 
-        Random random = new Random();
-
-        return filteredWords.get(
-                random.nextInt(filteredWords.size())
-        );
-
+        return filteredWords.get(new Random().nextInt(filteredWords.size()));
     }
 
 }

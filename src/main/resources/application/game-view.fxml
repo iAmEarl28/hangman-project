@@ -1,44 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.quentincillierre.hangman.controller.GameController">
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="850.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.quentincillierre.hangman.controller.GameController">
 
     <children>
 
-        <Button fx:id="backButton" layoutX="20" layoutY="20" prefHeight="35" prefWidth="45" text="←" />
 
-        <Label fx:id="categoryLabel" layoutX="100" layoutY="25" text="Category" />
+        <BorderPane AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
 
-        <Label fx:id="difficultyLabel" layoutX="250" layoutY="25" text="Difficulty" />
+            <!-- ===================== HEADER ===================== -->
+            <top>
+                <HBox alignment="CENTER_LEFT" spacing="8" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="6" left="22" right="22" top="16" />
+                    </padding>
+                    <children>
+                        <Button fx:id="backButton" prefHeight="38.0" prefWidth="38.0" styleClass="icon-button" text="←" />
+                        <Button fx:id="saveExitButton" prefHeight="38.0" prefWidth="120.0" styleClass="save-button" text="💾 Save &amp; Exit" />
+                        <Button fx:id="soundButton" prefHeight="38.0" prefWidth="38.0" styleClass="icon-button" text="🔊" />
 
-        <Label fx:id="diamondLabel" layoutX="420" layoutY="25" text="Diamonds: 0" />
+                        <Region HBox.hgrow="ALWAYS" />
 
-        <Label fx:id="timerLabel" layoutX="719.0" layoutY="25.0" text="60" />
+                        <Label fx:id="categoryLabel" styleClass="chip, stat-chip" text="Category" />
+                        <Label fx:id="difficultyLabel" styleClass="chip, stat-chip" text="Difficulty" />
+                        <Label fx:id="diamondLabel" styleClass="chip, stat-chip, diamond-chip" text="💎 0" />
+                        <Label fx:id="streakLabel" styleClass="chip, stat-chip" text="🔥 Streak: 0" />
+                        <Label fx:id="highStreakLabel" styleClass="chip, stat-chip" text="🏆 Best: 0" />
 
-        <ImageView fx:id="hangmanImageView" fitHeight="250" fitWidth="250" layoutX="40.0" layoutY="90.0" />
+                        <Region HBox.hgrow="ALWAYS" />
 
-        <Label fx:id="definitionLabel" layoutX="345.0" layoutY="215.0" prefWidth="450" text="Definition" />
+                        <Label fx:id="timerLabel" styleClass="chip, timer-chip" text="60" />
+                        <ImageView fx:id="characterPortraitView" fitHeight="38.0" fitWidth="38.0" preserveRatio="true" styleClass="character-portrait-frame" />
+                    </children>
+                </HBox>
+            </top>
 
-        <Label fx:id="wordLabel" layoutX="487.0" layoutY="157.0" style="-fx-font-size:26;" text="_ _ _ _ _" />
+            <!-- ===================== MAIN AREA ===================== -->
+            <center>
+                <HBox alignment="CENTER" spacing="36" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="0" left="30" right="30" top="6" />
+                    </padding>
+                    <children>
 
-        <Button fx:id="hintButton" layoutX="337.0" layoutY="252.0" prefHeight="38.0" prefWidth="149.0" text="Buy Hint (10 Diamonds)" />
+                        <!-- Hangman + attempts -->
+                        <VBox alignment="CENTER" spacing="14">
+                            <children>
+                                <ImageView fx:id="hangmanImageView" fitHeight="235" fitWidth="235" preserveRatio="true" />
+                                <Label fx:id="attemptsLabel" styleClass="chip, attempts-chip" text="💗 Attempts: 10" />
+                            </children>
+                        </VBox>
 
-        <GridPane fx:id="keyboardGrid" layoutX="179.0" layoutY="462.0" prefHeight="250.0" prefWidth="781.0" />
+                        <!-- Word / definition / result -->
+                        <VBox fx:id="glassCardBox" alignment="CENTER" maxWidth="420" prefWidth="420" spacing="12">
+                            <children>
+                                <Label fx:id="wordLabel" styleClass="word-label" text="_ _ _ _ _" />
 
-        <Label fx:id="attemptsLabel" layoutX="43.0" layoutY="608.0" text="Attempts: 10" />
+                                <VBox alignment="CENTER" maxWidth="400" minHeight="60" styleClass="glass-card">
+                                    <padding>
+                                        <Insets bottom="10" left="18" right="18" top="10" />
+                                    </padding>
+                                    <children>
+                                        <Label fx:id="definitionLabel" alignment="CENTER" prefWidth="360" styleClass="definition-label" text="Definition" textAlignment="CENTER" wrapText="true" />
+                                    </children>
+                                </VBox>
 
-              <Label fx:id="streakLabel" layoutX="570.0" layoutY="25.0" text="Streak: 0" />
+                                <Label fx:id="resultLabel" alignment="CENTER" prefWidth="400" styleClass="result-label" text="" textAlignment="CENTER" wrapText="true" />
+      
+                                <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="394.0" spacing="14">
+                                    <children>
+                                        <Button fx:id="hintButton" alignment="CENTER" prefHeight="36.0" prefWidth="180.0" styleClass="hint-button" text="💡 Buy Hint (10 💎)" />
+                                        <Button fx:id="tryAgainButton" prefHeight="36.0" prefWidth="110.0" styleClass="continue-button" text="Continue" visible="false" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
 
-        <Label fx:id="highStreakLabel" layoutX="570.0" layoutY="46.0" text="Highest: 0" />
+                    </children>
+                </HBox>
+            </center>
 
-        <Label fx:id="resultLabel" layoutX="33.0" layoutY="306.0" prefHeight="54.0" prefWidth="460.0" style="-fx-font-size:16; -fx-text-fill:#333333;" text="" />
+            <!-- ===================== KEYBOARD ===================== -->
+            <bottom>
+                <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="18" left="24" right="24" top="8" />
+                    </padding>
+                    <children>
+                        <VBox alignment="CENTER" maxWidth="780" styleClass="keyboard-panel">
+                            <padding>
+                                <Insets bottom="14" left="14" right="14" top="14" />
+                            </padding>
+                            <children>
+                                <GridPane fx:id="keyboardGrid" alignment="CENTER" hgap="4" vgap="8" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </bottom>
 
-        <Button fx:id="tryAgainButton" layoutX="118.0" layoutY="360.0" prefHeight="35.0" prefWidth="83.0" text="Continue" visible="false" />
+        </BorderPane>
 
     </children>
 

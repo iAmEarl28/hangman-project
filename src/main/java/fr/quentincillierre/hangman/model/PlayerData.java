@@ -1,5 +1,9 @@
 package fr.quentincillierre.hangman.model;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 public class PlayerData {
 
     // ===================================
@@ -18,6 +22,19 @@ public class PlayerData {
     private int diamonds;
     private int currentStreak;
     private int highestStreak;
+
+    // ===================================
+    // Unlocked Characters
+    // ===================================
+
+    /** Keys of characters the player has purchased/unlocked. "boy1" is always free. */
+    private Set<String> unlockedCharacters;
+
+    // ===================================
+    // Admin Mode
+    // ===================================
+
+    private boolean adminMode;
 
     // ===================================
     // Current Word
@@ -43,6 +60,10 @@ public class PlayerData {
         currentStreak = 0;
         highestStreak = 0;
         started = false;
+        adminMode = false;
+
+        unlockedCharacters = new HashSet<>();
+        unlockedCharacters.add("boy1"); // JOEY-kun is always free
 
         resetRound();
 
@@ -57,7 +78,7 @@ public class PlayerData {
         currentWord = null;
 
         remainingAttempts = 10;
-        remainingTime = 60;
+        resetTime();   // applies correct time for current difficulty (60/30/20s)
 
         hintUsed = false;
 
@@ -73,6 +94,7 @@ public class PlayerData {
 
     public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
+        resetTime();
     }
 
     // ===================================
@@ -108,8 +130,49 @@ public class PlayerData {
     }
 
     // ===================================
+    // Unlocked Characters
+    // ===================================
+
+    /** Returns true if the character with the given key is unlocked (or admin mode is on). */
+    public boolean isCharacterUnlocked(String key) {
+        if (adminMode) return true;
+        return unlockedCharacters.contains(key);
+    }
+
+    /** Permanently unlocks a character for this player. */
+    public void unlockCharacter(String key) {
+        if (key != null) {
+            unlockedCharacters.add(key);
+        }
+    }
+
+    /** Returns an unmodifiable view of the unlocked character keys (for saving). */
+    public Set<String> getUnlockedCharacters() {
+        return Collections.unmodifiableSet(unlockedCharacters);
+    }
+
+    /** Replaces the full set of unlocked characters (used when loading a save). */
+    public void setUnlockedCharacters(Set<String> keys) {
+        unlockedCharacters = new HashSet<>(keys);
+        unlockedCharacters.add("boy1"); // boy1 always free
+    }
+
+    // ===================================
+    // Admin Mode
+    // ===================================
+
+    public boolean isAdminMode() {
+        return adminMode;
+    }
+
+    public void setAdminMode(boolean adminMode) {
+        this.adminMode = adminMode;
+    }
+
+    // ===================================
     // Current Word
     // ===================================
+
 
     public Word getCurrentWord() {
         return currentWord;
@@ -125,6 +188,10 @@ public class PlayerData {
 
     public int getDiamonds() {
         return diamonds;
+    }
+
+    public void setDiamonds(int diamonds) {
+        this.diamonds = diamonds;
     }
 
     public void addDiamonds(int amount) {
@@ -158,8 +225,16 @@ public class PlayerData {
         return currentStreak;
     }
 
+    public void setCurrentStreak(int currentStreak) {
+        this.currentStreak = currentStreak;
+    }
+
     public int getHighestStreak() {
         return highestStreak;
+    }
+
+    public void setHighestStreak(int highestStreak) {
+        this.highestStreak = highestStreak;
     }
 
     public void increaseStreak() {
@@ -188,6 +263,10 @@ public class PlayerData {
         return remainingAttempts;
     }
 
+    public void setRemainingAttempts(int remainingAttempts) {
+        this.remainingAttempts = remainingAttempts;
+    }
+
     public void decreaseAttempt() {
 
         if (remainingAttempts > 0) {
@@ -200,7 +279,7 @@ public class PlayerData {
 
     public void resetAttempts() {
 
-        remainingAttempts = 6;
+        remainingAttempts = 10;
 
     }
 
@@ -210,6 +289,10 @@ public class PlayerData {
 
     public int getRemainingTime() {
         return remainingTime;
+    }
+
+    public void setRemainingTime(int remainingTime) {
+        this.remainingTime = remainingTime;
     }
 
     public void decreaseTime() {
@@ -223,9 +306,13 @@ public class PlayerData {
     }
 
     public void resetTime() {
-
-        remainingTime = 60;
-
+        if (difficulty == Difficulty.MEDIUM) {
+            remainingTime = 30;
+        } else if (difficulty == Difficulty.HARD) {
+            remainingTime = 20;
+        } else {
+            remainingTime = 60;
+        }
     }
 
     // ===================================
@@ -234,6 +321,10 @@ public class PlayerData {
 
     public boolean isHintUsed() {
         return hintUsed;
+    }
+
+    public void setHintUsed(boolean hintUsed) {
+        this.hintUsed = hintUsed;
     }
 
     public void useHint() {

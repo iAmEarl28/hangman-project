@@ -3,53 +3,25 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/24.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            prefHeight="650.0"
-            prefWidth="850.0"
-            fx:controller="fr.quentincillierre.hangman.controller.DifficultyController">
+<AnchorPane prefHeight="650.0" prefWidth="850.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.quentincillierre.hangman.controller.DifficultyController">
 
     <children>
 
-        <Button
-                fx:id="backButton"
-                layoutX="20.0"
-                layoutY="20.0"
-                prefWidth="45.0"
-                prefHeight="35.0"
-                text="←"
-                onAction="#goBack"/>
+        <VBox alignment="CENTER" spacing="22" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+            <children>
+                <Label styleClass="section-title" text=" Choose Your Cutie Levelness" />
 
-        <Label
-                layoutX="325.0"
-                layoutY="120.0"
-                text="SELECT DIFFICULTY"
-                style="-fx-font-size: 24px;" />
+                <Button fx:id="easyButton" onAction="#easyClicked" prefHeight="56.0" prefWidth="260.0" styleClass="difficulty-button, difficulty-easy" text="🌼 Easy" />
 
-        <Button
-                layoutX="325.0"
-                layoutY="220.0"
-                prefWidth="200.0"
-                prefHeight="50.0"
-                text="Easy"
-                onAction="#easyClicked"/>
+                <Button fx:id="mediumButton" onAction="#mediumClicked" prefHeight="56.0" prefWidth="260.0" styleClass="difficulty-button, difficulty-medium" text="🔒 Medium" />
 
-        <Button
-                layoutX="325.0"
-                layoutY="300.0"
-                prefWidth="200.0"
-                prefHeight="50.0"
-                text="Medium"
-                onAction="#mediumClicked"/>
+                <Button fx:id="hardButton" onAction="#hardClicked" prefHeight="56.0" prefWidth="260.0" styleClass="difficulty-button, difficulty-hard" text="🔒 Hard" />
+            </children>
+        </VBox>
 
-        <Button
-                layoutX="325.0"
-                layoutY="380.0"
-                prefWidth="200.0"
-                prefHeight="50.0"
-                text="Hard"
-                onAction="#hardClicked"/>
+        <Button fx:id="backButton" layoutX="24.0" layoutY="24.0" onAction="#goBack" prefHeight="42.0" prefWidth="42.0" styleClass="icon-button" text="←" />
 
     </children>
 

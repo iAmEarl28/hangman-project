@@ -28,10 +28,15 @@ class GameControllerImageTest {
     }
 
     @Test
-    void resolveHangmanImagePathShouldUseClasspathPicturesFolder() {
-        assertEquals("/pictures/0-hangman.png", GameController.resolveHangmanImagePath(0));
-        assertEquals("/pictures/3-hangman.png", GameController.resolveHangmanImagePath(3));
-        assertEquals("/pictures/10-hangman.png", GameController.resolveHangmanImagePath(10));
+    void resolveHangmanImagePathShouldUseTheSelectedCharactersPicturesFolder() {
+        assertEquals("/pictures/character1_boy1/0-hangman.png", GameController.resolveHangmanImagePath("boy1", 0));
+        assertEquals("/pictures/character1_boy1/3-hangman.png", GameController.resolveHangmanImagePath("boy1", 3));
+        assertEquals("/pictures/character3_boy2/10-hangman.png", GameController.resolveHangmanImagePath("boy2", 10));
+    }
+
+    @Test
+    void resolveHangmanImagePathShouldFallBackToDefaultCharacterWhenNoneSelected() {
+        assertEquals("/pictures/character1_boy1/0-hangman.png", GameController.resolveHangmanImagePath(null, 0));
     }
 
     @Test
@@ -89,6 +94,15 @@ class GameControllerImageTest {
         assertEquals(Alert.AlertType.WARNING, alert.getAlertType());
         assertEquals("Insufficient Diamonds", alert.getTitle());
         assertTrue(alert.getContentText().contains("10 diamonds"));
+    }
+
+    @Test
+    void fxmlShouldBindGlassCardBoxToController() throws Exception {
+        javafx.fxml.FXMLLoader loader = new javafx.fxml.FXMLLoader(getClass().getResource("/application/game-view.fxml"));
+        loader.load();
+        GameController controller = loader.getController();
+        Object glassCardBox = getField(controller, "glassCardBox");
+        assertTrue(glassCardBox != null, "glassCardBox should be bound from FXML");
     }
 
     private static void setField(Object target, String fieldName, Object value) throws Exception {

@@ -1,251 +1,301 @@
 Category,Difficulty,Word,Definition
-Animals,Easy,TIGER,A large striped wild cat.
-Animals,Easy,ZEBRA,A striped African animal.
-Animals,Easy,MOUSE,A small rodent.
-Animals,Easy,HORSE,A domesticated riding animal.
-Animals,Easy,SHEEP,A wool-producing farm animal.
-Animals,Hard,TIGER2,A large striped wild cat.
-Animals,Hard,ZEBRA2,A striped African animal.
-Animals,Hard,MOUSE2,A small rodent.
-Animals,Hard,HORSE2,A domesticated riding animal.
-Animals,Hard,SHEEP2,A wool-producing farm animal.
-Animals,Hard,TIGER3,A large striped wild cat.
-Animals,Hard,ZEBRA3,A striped African animal.
-Animals,Hard,MOUSE3,A small rodent.
-Animals,Hard,HORSE3,A domesticated riding animal.
-Animals,Hard,SHEEP3,A wool-producing farm animal.
-Animals,Hard,TIGER4,A large striped wild cat.
-Animals,Hard,ZEBRA4,A striped African animal.
-Animals,Hard,MOUSE4,A small rodent.
-Animals,Hard,HORSE4,A domesticated riding animal.
-Animals,Hard,SHEEP4,A wool-producing farm animal.
-Animals,Hard,TIGER5,A large striped wild cat.
-Animals,Hard,ZEBRA5,A striped African animal.
-Animals,Hard,MOUSE5,A small rodent.
-Animals,Hard,HORSE5,A domesticated riding animal.
-Animals,Hard,SHEEP5,A wool-producing farm animal.
-Foods,Easy,APPLE,A sweet fruit.
-Foods,Hard,BANANA,A yellow tropical fruit.
-Foods,Hard,CARROT,An orange root vegetable.
-Foods,Easy,PIZZA,A baked dish with toppings.
-Foods,Hard,BURGER,A sandwich with a patty.
-Foods,Hard,APPLE2,A sweet fruit.
-Foods,Medium,BANANA2,A yellow tropical fruit.
-Foods,Medium,CARROT2,An orange root vegetable.
-Foods,Hard,PIZZA2,A baked dish with toppings.
-Foods,Medium,BURGER2,A sandwich with a patty.
-Foods,Hard,APPLE3,A sweet fruit.
-Foods,Medium,BANANA3,A yellow tropical fruit.
-Foods,Medium,CARROT3,An orange root vegetable.
-Foods,Hard,PIZZA3,A baked dish with toppings.
-Foods,Medium,BURGER3,A sandwich with a patty.
-Foods,Hard,APPLE4,A sweet fruit.
-Foods,Medium,BANANA4,A yellow tropical fruit.
-Foods,Medium,CARROT4,An orange root vegetable.
-Foods,Hard,PIZZA4,A baked dish with toppings.
-Foods,Medium,BURGER4,A sandwich with a patty.
-Foods,Hard,APPLE5,A sweet fruit.
-Foods,Medium,BANANA5,A yellow tropical fruit.
-Foods,Medium,CARROT5,An orange root vegetable.
-Foods,Hard,PIZZA5,A baked dish with toppings.
-Foods,Medium,BURGER5,A sandwich with a patty.
-Technology,Easy,MOUSE,A computer pointing device.
-Technology,Medium,MONITOR,A computer display.
-Technology,Hard,KEYBOARD,An input device with keys.
-Technology,Hard,ALGORITHM,A step-by-step procedure.
-Technology,Hard,DATABASE,An organized collection of data.
-Technology,Hard,MOUSE2,A computer pointing device.
-Technology,Hard,MONITOR2,A computer display.
-Technology,Hard,KEYBOARD2,An input device with keys.
-Technology,Hard,ALGORITHM2,A step-by-step procedure.
-Technology,Hard,DATABASE2,An organized collection of data.
-Technology,Hard,MOUSE3,A computer pointing device.
-Technology,Hard,MONITOR3,A computer display.
-Technology,Hard,KEYBOARD3,An input device with keys.
-Technology,Hard,ALGORITHM3,A step-by-step procedure.
-Technology,Hard,DATABASE3,An organized collection of data.
-Technology,Hard,MOUSE4,A computer pointing device.
-Technology,Hard,MONITOR4,A computer display.
-Technology,Hard,KEYBOARD4,An input device with keys.
-Technology,Hard,ALGORITHM4,A step-by-step procedure.
-Technology,Hard,DATABASE4,An organized collection of data.
-Technology,Hard,MOUSE5,A computer pointing device.
-Technology,Hard,MONITOR5,A computer display.
-Technology,Hard,KEYBOARD5,An input device with keys.
-Technology,Hard,ALGORITHM5,A step-by-step procedure.
-Technology,Hard,DATABASE5,An organized collection of data.
-Science,Hard,ATOM,Smallest unit of an element.
-Science,Medium,BIOLOGY,Study of living things.
-Science,Hard,CHEMISTRY,Study of matter.
-Science,Medium,GRAVITY,Force attracting objects.
-Science,Hard,MOLECULE,Group of bonded atoms.
-Science,Easy,ATOM2,Smallest unit of an element.
-Science,Hard,BIOLOGY2,Study of living things.
-Science,Hard,CHEMISTRY2,Study of matter.
-Science,Hard,GRAVITY2,Force attracting objects.
-Science,Hard,MOLECULE2,Group of bonded atoms.
-Science,Easy,ATOM3,Smallest unit of an element.
-Science,Hard,BIOLOGY3,Study of living things.
-Science,Hard,CHEMISTRY3,Study of matter.
-Science,Hard,GRAVITY3,Force attracting objects.
-Science,Hard,MOLECULE3,Group of bonded atoms.
-Science,Easy,ATOM4,Smallest unit of an element.
-Science,Hard,BIOLOGY4,Study of living things.
-Science,Hard,CHEMISTRY4,Study of matter.
-Science,Hard,GRAVITY4,Force attracting objects.
-Science,Hard,MOLECULE4,Group of bonded atoms.
-Science,Easy,ATOM5,Smallest unit of an element.
-Science,Hard,BIOLOGY5,Study of living things.
-Science,Hard,CHEMISTRY5,Study of matter.
-Science,Hard,GRAVITY5,Force attracting objects.
-Science,Hard,MOLECULE5,Group of bonded atoms.
-Sports,Easy,CHESS,A strategy board game.
-Sports,Hard,TENNIS,A racket sport.
-Sports,Hard,FOOTBALL,A ball sport.
+Animals,Easy,LION,A large carnivorous big cat.
+Animals,Easy,BEAR,A large furry omnivore.
+Animals,Easy,WOLF,A wild canine predator.
+Animals,Easy,FROG,A small amphibian that jumps.
+Animals,Easy,DUCK,A waterbird with webbed feet.
+Animals,Easy,DEER,A graceful forest herbivore.
+Animals,Easy,CROW,A clever black bird.
+Animals,Easy,CRAB,A crustacean with claws.
+Animals,Easy,FISH,An aquatic vertebrate.
+Animals,Easy,GOAT,A horned domesticated animal.
+Animals,Medium,RABBIT,A small fluffy hopping mammal.
+Animals,Medium,PARROT,A colorful talking bird.
+Animals,Medium,JAGUAR,A large spotted wild cat.
+Animals,Medium,DONKEY,A domesticated working animal.
+Animals,Medium,FALCON,A fast bird of prey.
+Animals,Medium,LIZARD,A reptile with scaly skin.
+Animals,Medium,MONKEY,A primate with a long tail.
+Animals,Medium,TURTLE,A reptile with a hard shell.
+Animals,Medium,SALMON,A fish that swims upstream.
+Animals,Medium,PIGEON,A common city bird.
+Animals,Hard,ELEPHANT,The largest land animal.
+Animals,Hard,CROCODILE,A large reptilian predator.
+Animals,Hard,BUTTERFLY,A colorful winged insect.
+Animals,Hard,PORCUPINE,An animal covered in sharp quills.
+Animals,Hard,CHIMPANZEE,A great ape closely related to humans.
+Animals,Hard,FLAMINGO,A pink wading bird.
+Animals,Hard,KANGAROO,An Australian marsupial.
+Animals,Hard,ALBATROSS,A large seabird with wide wingspan.
+Animals,Hard,CHEETAH,The fastest land animal.
+Animals,Hard,WOLVERINE,A ferocious small carnivore.
+Countries,Easy,CUBA,An island nation in the Caribbean.
+Countries,Easy,PERU,A South American country.
+Countries,Easy,IRAN,A Middle Eastern nation.
+Countries,Easy,IRAQ,A country in the Middle East.
+Countries,Easy,CHAD,A landlocked African nation.
+Countries,Easy,FIJI,A Pacific island country.
+Countries,Easy,LAOS,A landlocked Southeast Asian nation.
+Countries,Easy,MALI,A West African landlocked country.
+Countries,Easy,OMAN,An Arabian Peninsula country.
+Countries,Easy,TOGO,A small West African country.
+Countries,Medium,BRAZIL,Largest country in South America.
+Countries,Medium,FRANCE,A country in Western Europe.
+Countries,Medium,CANADA,A country in North America.
+Countries,Medium,GREECE,A country in Southern Europe.
+Countries,Medium,MEXICO,A country in North America.
+Countries,Medium,TURKEY,A transcontinental country.
+Countries,Medium,SWEDEN,A Scandinavian country.
+Countries,Medium,POLAND,A Central European country.
+Countries,Medium,NORWAY,A Nordic country in Northern Europe.
+Countries,Medium,ISRAEL,A country in the Middle East.
+Countries,Hard,PORTUGAL,A country on the Iberian Peninsula.
+Countries,Hard,SCOTLAND,A country that is part of Great Britain.
+Countries,Hard,COLOMBIA,A country in northwestern South America.
+Countries,Hard,THAILAND,A country in Southeast Asia.
+Countries,Hard,ETHIOPIA,A landlocked country in Africa.
+Countries,Hard,MALAYSIA,A Southeast Asian country.
+Countries,Hard,PAKISTAN,A country in South Asia.
+Countries,Hard,ZIMBABWE,A landlocked country in Africa.
+Countries,Hard,CAMBODIA,A country in Southeast Asia.
+Countries,Hard,BULGARIA,A country in Southeast Europe.
+Foods,Easy,RICE,A staple grain crop.
+Foods,Easy,CORN,A yellow cereal grain.
+Foods,Easy,CAKE,A baked sweet dessert.
+Foods,Easy,MILK,A dairy drink from cows.
+Foods,Easy,BEAN,A small edible legume.
+Foods,Easy,PORK,Meat from a pig.
+Foods,Easy,BEEF,Meat from a cow.
+Foods,Easy,PLUM,A small sweet purple fruit.
+Foods,Easy,LIME,A green citrus fruit.
+Foods,Easy,PEAR,A sweet teardrop-shaped fruit.
+Foods,Medium,BANANA,A yellow tropical fruit.
+Foods,Medium,CARROT,An orange root vegetable.
+Foods,Medium,BURGER,A sandwich with a meat patty.
+Foods,Medium,NOODLE,A long strip of pasta.
+Foods,Medium,YOGURT,A fermented dairy product.
+Foods,Medium,WAFFLE,A crispy grid-shaped batter cake.
+Foods,Medium,MUFFIN,A small round baked bread.
+Foods,Medium,SALMON,A popular pink fish.
+Foods,Medium,ALMOND,A nutritious tree nut.
+Foods,Medium,MANGO,A tropical sweet fruit.
+Foods,Hard,BROCCOLI,A green vegetable in the cabbage family.
+Foods,Hard,AVOCADO,A creamy green fruit.
+Foods,Hard,CINNAMON,A fragrant cooking spice.
+Foods,Hard,LASAGNA,A layered Italian pasta dish.
+Foods,Hard,EGGPLANT,A purple vegetable.
+Foods,Hard,ASPARAGUS,A green spring vegetable.
+Foods,Hard,BLUEBERRY,A small blue wild fruit.
+Foods,Hard,CHOCOLATE,A sweet brown confection.
+Foods,Hard,PINEAPPLE,A tropical spiky fruit.
+Foods,Hard,SPAGHETTI,A long thin Italian pasta.
+Sports,Easy,GOLF,A precision club-and-ball sport.
+Sports,Easy,POLO,A sport played on horseback.
+Sports,Easy,YOGA,A physical and mental practice.
+Sports,Easy,SWIM,The act of moving through water.
+Sports,Easy,SURF,Riding ocean waves on a board.
+Sports,Easy,JUDO,A Japanese martial art.
+Sports,Easy,RACE,A competition of speed.
+Sports,Easy,DUEL,A contest between two people.
+Sports,Easy,KICK,Striking with the foot.
+Sports,Easy,DIVE,Jumping into water headfirst.
+Sports,Medium,TENNIS,A racket sport played on a court.
+Sports,Medium,KARATE,A Japanese martial art.
+Sports,Medium,HOCKEY,A sport played with a puck or ball.
+Sports,Medium,SKIING,Gliding on snow with skis.
+Sports,Medium,BOXING,A combat sport using fists.
+Sports,Medium,ROWING,Propelling a boat with oars.
+Sports,Medium,FENCING,A sword-fighting sport.
 Sports,Medium,CYCLING,Riding bicycles competitively.
-Sports,Hard,VOLLEYBALL,A net sport.
-Sports,Hard,CHESS2,A strategy board game.
-Sports,Medium,TENNIS2,A racket sport.
-Sports,Hard,FOOTBALL2,A ball sport.
-Sports,Hard,CYCLING2,Riding bicycles competitively.
-Sports,Hard,VOLLEYBALL2,A net sport.
-Sports,Hard,CHESS3,A strategy board game.
-Sports,Medium,TENNIS3,A racket sport.
-Sports,Hard,FOOTBALL3,A ball sport.
-Sports,Hard,CYCLING3,Riding bicycles competitively.
-Sports,Hard,VOLLEYBALL3,A net sport.
-Sports,Hard,CHESS4,A strategy board game.
-Sports,Medium,TENNIS4,A racket sport.
-Sports,Hard,FOOTBALL4,A ball sport.
-Sports,Hard,CYCLING4,Riding bicycles competitively.
-Sports,Hard,VOLLEYBALL4,A net sport.
-Sports,Hard,CHESS5,A strategy board game.
-Sports,Medium,TENNIS5,A racket sport.
-Sports,Hard,FOOTBALL5,A ball sport.
-Sports,Hard,CYCLING5,Riding bicycles competitively.
-Sports,Hard,VOLLEYBALL5,A net sport.
-Space,Easy,EARTH,Our home planet.
-Space,Hard,MARS,The red planet.
-Space,Hard,GALAXY,A huge collection of stars.
-Space,Hard,ASTEROID,A rocky object in space.
-Space,Hard,SATELLITE,An object orbiting another.
-Space,Hard,EARTH2,Our home planet.
-Space,Easy,MARS2,The red planet.
-Space,Medium,GALAXY2,A huge collection of stars.
-Space,Hard,ASTEROID2,A rocky object in space.
-Space,Hard,SATELLITE2,An object orbiting another.
-Space,Hard,EARTH3,Our home planet.
-Space,Easy,MARS3,The red planet.
-Space,Medium,GALAXY3,A huge collection of stars.
-Space,Hard,ASTEROID3,A rocky object in space.
-Space,Hard,SATELLITE3,An object orbiting another.
-Space,Hard,EARTH4,Our home planet.
-Space,Easy,MARS4,The red planet.
-Space,Medium,GALAXY4,A huge collection of stars.
-Space,Hard,ASTEROID4,A rocky object in space.
-Space,Hard,SATELLITE4,An object orbiting another.
-Space,Hard,EARTH5,Our home planet.
-Space,Easy,MARS5,The red planet.
-Space,Medium,GALAXY5,A huge collection of stars.
-Space,Hard,ASTEROID5,A rocky object in space.
-Space,Hard,SATELLITE5,An object orbiting another.
-Jobs,Medium,TEACHER,Educates students.
-Jobs,Hard,DOCTOR,Treats sick people.
-Jobs,Hard,ENGINEER,Designs and builds systems.
-Jobs,Hard,PROGRAMMER,Writes software.
-Jobs,Hard,CHEF,Prepares food.
-Jobs,Hard,TEACHER2,Educates students.
-Jobs,Medium,DOCTOR2,Treats sick people.
-Jobs,Hard,ENGINEER2,Designs and builds systems.
-Jobs,Hard,PROGRAMMER2,Writes software.
-Jobs,Easy,CHEF2,Prepares food.
-Jobs,Hard,TEACHER3,Educates students.
-Jobs,Medium,DOCTOR3,Treats sick people.
-Jobs,Hard,ENGINEER3,Designs and builds systems.
-Jobs,Hard,PROGRAMMER3,Writes software.
-Jobs,Easy,CHEF3,Prepares food.
-Jobs,Hard,TEACHER4,Educates students.
-Jobs,Medium,DOCTOR4,Treats sick people.
-Jobs,Hard,ENGINEER4,Designs and builds systems.
-Jobs,Hard,PROGRAMMER4,Writes software.
-Jobs,Easy,CHEF4,Prepares food.
-Jobs,Hard,TEACHER5,Educates students.
-Jobs,Medium,DOCTOR5,Treats sick people.
-Jobs,Hard,ENGINEER5,Designs and builds systems.
-Jobs,Hard,PROGRAMMER5,Writes software.
-Jobs,Easy,CHEF5,Prepares food.
-Music,Hard,GUITAR,A string instrument.
-Music,Easy,PIANO,A keyboard instrument.
-Music,Hard,VIOLIN,A bowed string instrument.
-Music,Hard,MELODY,The main tune.
-Music,Hard,RHYTHM,The beat pattern.
-Music,Medium,GUITAR2,A string instrument.
-Music,Hard,PIANO2,A keyboard instrument.
-Music,Medium,VIOLIN2,A bowed string instrument.
-Music,Medium,MELODY2,The main tune.
-Music,Medium,RHYTHM2,The beat pattern.
-Music,Medium,GUITAR3,A string instrument.
-Music,Hard,PIANO3,A keyboard instrument.
-Music,Medium,VIOLIN3,A bowed string instrument.
-Music,Medium,MELODY3,The main tune.
-Music,Medium,RHYTHM3,The beat pattern.
-Music,Medium,GUITAR4,A string instrument.
-Music,Hard,PIANO4,A keyboard instrument.
-Music,Medium,VIOLIN4,A bowed string instrument.
-Music,Medium,MELODY4,The main tune.
-Music,Medium,RHYTHM4,The beat pattern.
-Music,Medium,GUITAR5,A string instrument.
-Music,Hard,PIANO5,A keyboard instrument.
-Music,Medium,VIOLIN5,A bowed string instrument.
-Music,Medium,MELODY5,The main tune.
-Music,Medium,RHYTHM5,The beat pattern.
-Countries,Easy,JAPAN,An island nation in Asia.
-Countries,Hard,BRAZIL,Largest country in South America.
-Countries,Hard,CANADA,Country in North America.
-Countries,Hard,FRANCE,European country.
-Countries,Easy,INDIA,South Asian country.
-Countries,Hard,JAPAN2,An island nation in Asia.
-Countries,Medium,BRAZIL2,Largest country in South America.
-Countries,Medium,CANADA2,Country in North America.
-Countries,Medium,FRANCE2,European country.
-Countries,Hard,INDIA2,South Asian country.
-Countries,Hard,JAPAN3,An island nation in Asia.
-Countries,Medium,BRAZIL3,Largest country in South America.
-Countries,Medium,CANADA3,Country in North America.
-Countries,Medium,FRANCE3,European country.
-Countries,Hard,INDIA3,South Asian country.
-Countries,Hard,JAPAN4,An island nation in Asia.
-Countries,Medium,BRAZIL4,Largest country in South America.
-Countries,Medium,CANADA4,Country in North America.
-Countries,Medium,FRANCE4,European country.
-Countries,Hard,INDIA4,South Asian country.
-Countries,Hard,JAPAN5,An island nation in Asia.
-Countries,Medium,BRAZIL5,Largest country in South America.
-Countries,Medium,CANADA5,Country in North America.
-Countries,Medium,FRANCE5,European country.
-Countries,Hard,INDIA5,South Asian country.
-Movies,Hard,DIRECTOR,Leads movie production.
-Movies,Easy,ACTOR,Performs in films.
-Movies,Hard,SCRIPT,Written dialogue.
-Movies,Hard,CAMERA,Records video.
-Movies,Medium,TRAILER,Short movie preview.
-Movies,Hard,DIRECTOR2,Leads movie production.
-Movies,Hard,ACTOR2,Performs in films.
-Movies,Medium,SCRIPT2,Written dialogue.
-Movies,Medium,CAMERA2,Records video.
-Movies,Hard,TRAILER2,Short movie preview.
-Movies,Hard,DIRECTOR3,Leads movie production.
-Movies,Hard,ACTOR3,Performs in films.
-Movies,Medium,SCRIPT3,Written dialogue.
-Movies,Medium,CAMERA3,Records video.
-Movies,Hard,TRAILER3,Short movie preview.
-Movies,Hard,DIRECTOR4,Leads movie production.
-Movies,Hard,ACTOR4,Performs in films.
-Movies,Medium,SCRIPT4,Written dialogue.
-Movies,Medium,CAMERA4,Records video.
-Movies,Hard,TRAILER4,Short movie preview.
-Movies,Hard,DIRECTOR5,Leads movie production.
-Movies,Hard,ACTOR5,Performs in films.
-Movies,Medium,SCRIPT5,Written dialogue.
-Movies,Medium,CAMERA5,Records video.
-Movies,Hard,TRAILER5,Short movie preview.
+Sports,Medium,ARCHERY,Shooting arrows at a target.
+Sports,Medium,SURFING,Riding ocean waves on a board.
+Sports,Hard,SWIMMING,Moving through water using the body.
+Sports,Hard,FOOTBALL,A ball sport played on a field.
+Sports,Hard,BASEBALL,A bat-and-ball team sport.
+Sports,Hard,MARATHON,A long-distance running race.
+Sports,Hard,TRIATHLON,A race combining swim, bike, and run.
+Sports,Hard,WRESTLING,A grappling combat sport.
+Sports,Hard,DECATHLON,An athletic competition with ten events.
+Sports,Hard,BADMINTON,A racket sport using a shuttlecock.
+Sports,Hard,SNOWBOARD,A board used to glide down snowy slopes.
+Sports,Hard,GYMNASIUM,A place for physical exercise.
+Technology,Easy,DATA,Information stored or processed.
+Technology,Easy,CODE,Written instructions for a computer.
+Technology,Easy,CHIP,A small electronic component.
+Technology,Easy,DISK,A storage device for data.
+Technology,Easy,BYTE,A unit of digital information.
+Technology,Easy,FILE,A collection of data on a computer.
+Technology,Easy,PORT,A connection point on a device.
+Technology,Easy,WIFI,Wireless internet technology.
+Technology,Easy,SYNC,To synchronize data between devices.
+Technology,Easy,APPS,Software applications on a device.
+Technology,Medium,LAPTOP,A portable personal computer.
+Technology,Medium,ROUTER,A device that directs network traffic.
+Technology,Medium,SERVER,A computer that provides services.
+Technology,Medium,CAMERA,A device for capturing images.
+Technology,Medium,SENSOR,A device that detects changes.
+Technology,Medium,SCREEN,A display surface for output.
+Technology,Medium,TABLET,A flat portable touchscreen device.
+Technology,Medium,CURSOR,A pointer on a computer screen.
+Technology,Medium,WIDGET,A small graphical interface element.
+Technology,Medium,FILTER,A tool to sort or refine data.
+Technology,Hard,KEYBOARD,An input device with keys.
+Technology,Hard,MONITOR,A visual display unit for a computer.
+Technology,Hard,INTERNET,A global network of computers.
+Technology,Hard,PASSWORD,A secret code for authentication.
+Technology,Hard,DATABASE,An organized collection of data.
+Technology,Hard,BLUETOOTH,A short-range wireless technology.
+Technology,Hard,ALGORITHM,A step-by-step computational procedure.
+Technology,Hard,COMPILER,A program that translates code.
+Technology,Hard,INTERFACE,A point of interaction between systems.
+Technology,Hard,PROCESSOR,A chip that executes instructions.
+Movies,Easy,FILM,A recorded story shown on screen.
+Movies,Easy,CAST,The group of actors in a movie.
+Movies,Easy,PLOT,The main story of a movie.
+Movies,Easy,ROLE,A character played by an actor.
+Movies,Easy,REEL,A spool of film.
+Movies,Easy,STAR,A famous actor or performer.
+Movies,Easy,TAKE,A single recorded attempt of a scene.
+Movies,Easy,PROP,An object used in a film.
+Movies,Easy,CLIP,A short section of a film.
+Movies,Easy,EDIT,To cut and assemble film footage.
+Movies,Medium,SCRIPT,Written dialogue for a film.
+Movies,Medium,HORROR,A genre designed to frighten.
+Movies,Medium,COMEDY,A genre designed to amuse.
+Movies,Medium,SEQUEL,A follow-up film to an original.
+Movies,Medium,STUDIO,A place where movies are made.
+Movies,Medium,CINEMA,A place to watch movies.
+Movies,Medium,ACTING,The art of performing in a film.
+Movies,Medium,CAMERA,A device used to record film.
+Movies,Medium,EXTRAS,Background actors in a scene.
+Movies,Medium,ENDING,The final part of a film.
+Movies,Hard,DIRECTOR,The person who leads a film's production.
+Movies,Hard,PRODUCER,Someone who finances and manages a film.
+Movies,Hard,ANIMATED,Relating to animation in film.
+Movies,Hard,THRILLER,A suspenseful movie genre.
+Movies,Hard,SCREENPLAY,The written script for a film.
+Movies,Hard,PREMIERE,The first public showing of a film.
+Movies,Hard,SUBTITLE,Translated text displayed on screen.
+Movies,Hard,MONOLOGUE,A long speech by one character.
+Movies,Hard,BACKSTAGE,The area behind the stage in a theater.
+Movies,Hard,CLIFFHANGER,An ending that leaves the story unresolved.
+Science,Easy,ATOM,The smallest unit of an element.
+Science,Easy,CELL,The basic unit of life.
+Science,Easy,GENE,A unit of heredity in DNA.
+Science,Easy,ACID,A corrosive chemical substance.
+Science,Easy,LENS,A curved glass that bends light.
+Science,Easy,HEAT,A form of thermal energy.
+Science,Easy,MASS,The amount of matter in an object.
+Science,Easy,WAVE,A disturbance that carries energy.
+Science,Easy,SOIL,The top layer of earth.
+Science,Easy,ROCK,A solid mineral material.
+Science,Medium,ENERGY,The capacity to do work.
+Science,Medium,PHOTON,A particle of light.
+Science,Medium,PROTON,A positively charged particle.
+Science,Medium,OXYGEN,A gas essential for life.
+Science,Medium,CARBON,A key element in organic chemistry.
+Science,Medium,PLASMA,The fourth state of matter.
+Science,Medium,MAGNET,An object that attracts iron.
+Science,Medium,FOSSIL,Remains of an ancient organism.
+Science,Medium,NEURON,A nerve cell in the brain.
+Science,Medium,FUNGUS,A kingdom of organisms like mushrooms.
+Science,Hard,MOLECULE,A group of bonded atoms.
+Science,Hard,ELECTRON,A negatively charged subatomic particle.
+Science,Hard,BACTERIA,Single-celled microorganisms.
+Science,Hard,CHEMICAL,Relating to chemistry or compounds.
+Science,Hard,REACTION,A process where substances change.
+Science,Hard,ORGANISM,Any living thing.
+Science,Hard,MUTATION,A change in DNA sequence.
+Science,Hard,CATALYST,A substance that speeds up a reaction.
+Science,Hard,ANTIBODY,A protein that fights infection.
+Science,Hard,ECOSYSTEM,A community of organisms and environment.
+Space,Easy,MARS,The red planet in our solar system.
+Space,Easy,MOON,Earth's natural satellite.
+Space,Easy,STAR,A massive luminous ball of plasma.
+Space,Easy,SUNS,The star at the center of our system.
+Space,Easy,COMET,An icy body orbiting the sun.
+Space,Easy,NOVA,A sudden brightening of a star.
+Space,Easy,VOID,Empty space between galaxies.
+Space,Easy,DUST,Fine particles found in space.
+Space,Easy,RING,A band of material around a planet.
+Space,Easy,DARK,Relating to dark matter or dark energy.
+Space,Medium,GALAXY,A huge system of stars.
+Space,Medium,NEBULA,A cloud of gas and dust in space.
+Space,Medium,SATURN,A planet known for its rings.
+Space,Medium,VENUS,The hottest planet in the solar system.
+Space,Medium,URANUS,A gas giant tilted on its axis.
+Space,Medium,METEOR,A rock that enters Earth's atmosphere.
+Space,Medium,PHOTON,A particle of light from stars.
+Space,Medium,PULSAR,A rapidly rotating neutron star.
+Space,Medium,QUASAR,An extremely bright galactic nucleus.
+Space,Medium,CORONA,The outer atmosphere of the Sun.
+Space,Hard,ASTEROID,A rocky body orbiting the Sun.
+Space,Hard,SATELLITE,An object that orbits a planet.
+Space,Hard,SUPERNOVA,A powerful stellar explosion.
+Space,Hard,EXOPLANET,A planet outside our solar system.
+Space,Hard,BLACKHOLE,A region of space with extreme gravity.
+Space,Hard,TELESCOPE,An instrument for viewing distant objects.
+Space,Hard,COSMOLOGY,The study of the origin of the universe.
+Space,Hard,WORMHOLE,A hypothetical tunnel through spacetime.
+Space,Hard,MAGNETAR,A neutron star with an extreme magnetic field.
+Space,Hard,SOLARSYSTEM,The Sun and all objects orbiting it.
+Jobs,Easy,CHEF,A person who cooks professionally.
+Jobs,Easy,MAID,A person who cleans.
+Jobs,Easy,MONK,A member of a religious community.
+Jobs,Easy,POET,A writer of poetry.
+Jobs,Easy,VET,A doctor for animals.
+Jobs,Easy,GUARD,A person who protects.
+Jobs,Easy,COACH,A person who trains athletes.
+Jobs,Easy,JUDGE,A person who makes legal decisions.
+Jobs,Easy,NURSE,A medical care professional.
+Jobs,Easy,PILOT,A person who flies aircraft.
+Jobs,Medium,LAWYER,A professional who practices law.
+Jobs,Medium,DOCTOR,A person who treats illnesses.
+Jobs,Medium,ARTIST,A person who creates art.
+Jobs,Medium,WRITER,A person who writes content.
+Jobs,Medium,FARMER,A person who works on a farm.
+Jobs,Medium,BARBER,A person who cuts hair.
+Jobs,Medium,DANCER,A person who performs dance.
+Jobs,Medium,BANKER,A person working in banking.
+Jobs,Medium,SINGER,A person who sings.
+Jobs,Medium,TEACHER,A person who educates students.
+Jobs,Hard,ENGINEER,A person who designs systems.
+Jobs,Hard,DIPLOMAT,An official who represents a government.
+Jobs,Hard,MECHANIC,A person who repairs machines.
+Jobs,Hard,SOFTWARE,A set of programs for a computer.
+Jobs,Hard,DIRECTOR,A person who manages productions.
+Jobs,Hard,SCIENTIST,A person who studies natural sciences.
+Jobs,Hard,ASTRONAUT,A person who travels to space.
+Jobs,Hard,LIBRARIAN,A person who manages a library.
+Jobs,Hard,ARCHITECT,A person who designs buildings.
+Jobs,Hard,PHYSICIAN,A licensed medical doctor.
+Music,Easy,SONG,A musical composition.
+Music,Easy,BEAT,A rhythmic unit in music.
+Music,Easy,TUNE,A simple melody.
+Music,Easy,NOTE,A musical sound at a specific pitch.
+Music,Easy,BAND,A group of musicians.
+Music,Easy,DRUM,A percussion instrument.
+Music,Easy,HARP,A large stringed instrument.
+Music,Easy,JAZZ,A genre of music with improvisation.
+Music,Easy,FOLK,Traditional music of a culture.
+Music,Easy,HYMN,A religious song.
+Music,Medium,GUITAR,A popular string instrument.
+Music,Medium,VIOLIN,A bowed string instrument.
+Music,Medium,MELODY,The main tune of a song.
+Music,Medium,RHYTHM,The beat pattern in music.
+Music,Medium,CHORUS,A repeated section of a song.
+Music,Medium,OCTAVE,A series of eight musical notes.
+Music,Medium,TREBLE,The higher range of musical notes.
+Music,Medium,BALLAD,A slow, romantic song.
+Music,Medium,BRIDGE,A contrasting section in a song.
+Music,Medium,SONATA,A musical composition for instruments.
+Music,Hard,SYMPHONY,A complex musical composition.
+Music,Hard,ORCHESTRA,A large ensemble of musicians.
+Music,Hard,COMPOSER,A person who writes music.
+Music,Hard,HARMONIC,Relating to musical harmonics.
+Music,Hard,CLASSICAL,A genre of formal Western music.
+Music,Hard,CONDUCTOR,A person who leads an orchestra.
+Music,Hard,SAXOPHONE,A woodwind musical instrument.
+Music,Hard,METRONOME,A device that keeps musical time.
+Music,Hard,CRESCENDO,A gradual increase in musical volume.
+Music,Hard,IMPROVISE,To create music spontaneously.

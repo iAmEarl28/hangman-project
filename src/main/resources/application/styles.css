@@ -1,0 +1,474 @@
+
+.root-bg {
+
+    -fx-background-image: url("all_background/background.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-color: linear-gradient(to bottom right, #FFE4F1 0%, #FBE0FF 45%, #E6D6FF 100%);
+}
+
+* {
+    -fx-font-family: "Comic Sans MS", "Segoe Print", "Chalkboard SE", "Trebuchet MS", sans-serif;
+}
+
+/* ---------------------------------------------------------------------
+   Titles & text
+   --------------------------------------------------------------------- */
+.title-label {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #C2408A;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.85), 6, 0.5, 0, 1);
+}
+
+.subtitle-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #8A5A9E;
+    -fx-font-style: italic;
+}
+
+.section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #A83279;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 4, 0.4, 0, 1);
+}
+
+/* Primary "magic" call-to-action button (Start) */
+.primary-button {
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-background-color: linear-gradient(to bottom, #FFB6DE, #E85CB0);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 3;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(232,92,176,0.6), 16, 0.35, 0, 4);
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFC7E6, #F074C0);
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+.primary-button:armed {
+    -fx-background-color: linear-gradient(to bottom, #E85CB0, #D1499D);
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+/* Secondary button (Resume Game) */
+.secondary-button {
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-background-color: linear-gradient(to bottom, #C3B1E1, #967BB6);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 3;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(150,123,182,0.6), 14, 0.3, 0, 3);
+}
+
+.secondary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #D4C3F0, #A78CC7);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.secondary-button:disabled {
+    -fx-opacity: 0.5;
+    -fx-effect: none;
+    -fx-cursor: default;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+/* Save & Exit button */
+.save-button {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #FFE4F1);
+    -fx-text-fill: #C2408A;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFC1DE;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(194,64,138,0.25), 6, 0.2, 0, 2);
+}
+
+.save-button:hover {
+    -fx-background-color: #FFE9F5;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Round little icon button (back arrow) */
+.icon-button {
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #C2408A;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFC1DE;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(194,64,138,0.3), 6, 0.2, 0, 2);
+}
+
+.icon-button:hover {
+    -fx-background-color: #FFE9F5;
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+}
+
+/* ---------------------------------------------------------------------
+   Difficulty buttons (pastel colour coded, same pill shape/size)
+   --------------------------------------------------------------------- */
+.difficulty-button {
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 3;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 8, 0.2, 0, 3);
+}
+
+.difficulty-button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.difficulty-easy {
+    -fx-background-color: linear-gradient(to bottom, #B7ECC7, #7CD9A0);
+}
+
+.difficulty-medium {
+    -fx-background-color: linear-gradient(to bottom, #FFE099, #FFC24B);
+}
+
+.difficulty-hard {
+    -fx-background-color: linear-gradient(to bottom, #FFAFAF, #FF7A93);
+}
+
+/* ---------------------------------------------------------------------
+   Character selection cards
+   --------------------------------------------------------------------- */
+.character-card {
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #FFF0F8);
+    -fx-border-color: #FFC1DE;
+    -fx-border-width: 3;
+    -fx-text-fill: #A83279;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-content-display: top;
+    -fx-graphic-text-gap: 8;
+    -fx-effect: dropshadow(gaussian, rgba(194,64,138,0.25), 8, 0.2, 0, 3);
+}
+
+.character-card:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFF0F8, #FFD6ED);
+    -fx-border-color: #E85CB0;
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+/* Applied to the character card the player just picked, right before the
+   game screen loads: a glowing pink border/shadow highlight. */
+.character-card-selected {
+    -fx-background-color: linear-gradient(to bottom, #FFE3F3, #FFC1E4);
+    -fx-border-color: #FF3D9A;
+    -fx-border-width: 4;
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+}
+
+/* ---------------------------------------------------------------------
+   Persistent character portrait shown on the game screen
+   --------------------------------------------------------------------- */
+.character-portrait-frame {
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFC1DE;
+    -fx-border-width: 3;
+    -fx-padding: 3;
+    -fx-effect: dropshadow(gaussian, rgba(194,64,138,0.3), 8, 0.2, 0, 2);
+}
+
+/* ---------------------------------------------------------------------
+   Card panels used to frame content (definition, keyboard, word area…)
+   --------------------------------------------------------------------- */
+.glass-card {
+    -fx-background-radius: 22;
+    -fx-border-radius: 22;
+    -fx-background-color: rgba(255,255,255,0.40);
+    -fx-border-color: rgba(255,255,255,0.65);
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(168,50,121,0.18), 10, 0.2, 0, 3);
+}
+
+/* ---------------------------------------------------------------------
+   Header stat chips (category / difficulty / diamonds / streak / timer)
+   Shared shape/spacing lives in .chip; each variant only overrides color.
+   --------------------------------------------------------------------- */
+.chip {
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-width: 2;
+    -fx-padding: 4 7 4 7;
+    -fx-font-weight: bold;
+    -fx-min-width: -fx-use-pref-size;
+}
+
+.stat-chip {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFC1DE;
+    -fx-font-size: 12px;
+    -fx-text-fill: #A83279;
+}
+
+.timer-chip {
+    -fx-background-color: linear-gradient(to bottom, #FFE099, #FFC24B);
+    -fx-border-color: #FFFFFF;
+    -fx-padding: 6 16 6 16;
+    -fx-font-size: 14px;
+    -fx-text-fill: #7A4A00;
+}
+
+.timer-warning {
+    -fx-background-color: linear-gradient(to bottom, #FF8080, #FF334B) !important;
+    -fx-text-fill: #FFFFFF !important;
+    -fx-border-color: #FF1A40 !important;
+    -fx-effect: dropshadow(gaussian, rgba(255, 26, 64, 0.6), 10, 0.4, 0, 1);
+}
+
+.diamond-chip {
+    -fx-background-color: linear-gradient(to bottom, #D6F3FF, #A6E3FF);
+    -fx-text-fill: #1D5E80;
+    -fx-border-color: #FFFFFF;
+}
+
+.attempts-chip {
+    -fx-background-color: linear-gradient(to bottom, #FFD6E6, #FFB6D8);
+    -fx-border-color: #FFFFFF;
+    -fx-padding: 6 16 6 16;
+    -fx-font-size: 13px;
+    -fx-text-fill: #A22A64;
+}
+
+/* ---------------------------------------------------------------------
+   Word / definition / result
+   --------------------------------------------------------------------- */
+.word-label {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #C2408A;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.9), 4, 0.5, 0, 1);
+}
+
+.definition-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #7A4B72;
+    -fx-font-style: italic;
+    -fx-wrap-text: true;
+}
+
+.result-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #A22A64;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+/* ---------------------------------------------------------------------
+   Hint & continue buttons
+   --------------------------------------------------------------------- */
+.hint-button {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-background-color: linear-gradient(to bottom, #E3C9FF, #C79CF2);
+    -fx-text-fill: #4A2270;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(122,63,168,0.35), 6, 0.2, 0, 2);
+}
+
+.hint-button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.hint-button:disabled {
+    -fx-opacity: 0.5;
+    -fx-effect: none;
+}
+
+.continue-button {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-background-color: linear-gradient(to bottom, #B7ECC7, #7CD9A0);
+    -fx-text-fill: #1F5C36;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52,150,90,0.4), 6, 0.2, 0, 2);
+}
+
+.continue-button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* ---------------------------------------------------------------------
+   Keyboard keys
+   --------------------------------------------------------------------- */
+.keyboard-panel {
+    -fx-background-radius: 26;
+    -fx-border-radius: 26;
+    -fx-background-color: rgba(255,255,255,0.6);
+    -fx-border-color: rgba(255,255,255,0.9);
+    -fx-border-width: 2;
+}
+
+.key-button {
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #FFE3F1);
+    -fx-border-color: #FFC1DE;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #A83279;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(194,64,138,0.2), 3, 0.1, 0, 1);
+}
+
+.key-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFF0F8, #FFC7E2);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+}
+
+.key-button:disabled {
+    -fx-opacity: 1;
+    -fx-cursor: default;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+.key-correct:disabled {
+    -fx-background-color: linear-gradient(to bottom, #C6F2D3, #8FE0AC);
+    -fx-border-color: #6FCB93;
+    -fx-text-fill: #1F5C36;
+    -fx-opacity: 1;
+}
+
+.key-wrong:disabled {
+    -fx-background-color: linear-gradient(to bottom, #F0DCE6, #DCC0CE);
+    -fx-border-color: #C7A6B7;
+    -fx-text-fill: #8A6A78;
+    -fx-opacity: 1;
+}
+
+/* ---------------------------------------------------------------------
+   Admin mode button (top-left corner, subtle)
+   --------------------------------------------------------------------- */
+.admin-button {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-color: rgba(255,255,255,0.45);
+    -fx-border-color: rgba(255,255,255,0.65);
+    -fx-border-width: 1;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 2 6 2 6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.1, 0, 1);
+}
+
+.admin-button:hover {
+    -fx-background-color: rgba(255,255,255,0.7);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+}
+
+.admin-submit-button {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-color: linear-gradient(to bottom, #C3B1E1, #967BB6);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 1.5;
+    -fx-cursor: hand;
+    -fx-padding: 4 10 4 10;
+}
+
+.admin-submit-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #D4C3F0, #A78CC7);
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+/* ---------------------------------------------------------------------
+   Character card (selection screen)
+   --------------------------------------------------------------------- */
+.character-card {
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-background-color: rgba(255,255,255,0.7);
+    -fx-border-color: rgba(255,193,222,0.8);
+    -fx-border-width: 2;
+    -fx-text-fill: #A83279;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(168,50,121,0.2), 6, 0.15, 0, 2);
+}
+
+.character-card:hover {
+    -fx-background-color: rgba(255,255,255,0.9);
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+.character-card-selected {
+    -fx-border-color: #FF4FA3;
+    -fx-border-width: 3;
+    -fx-background-color: rgba(255,220,240,0.85);
+}
+
+.character-def-label {
+    -fx-font-size: 10.5px;
+    -fx-text-fill: #5C3A53;
+    -fx-font-style: italic;
+    -fx-background-color: rgba(255, 255, 255, 0.82);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: rgba(255, 193, 222, 0.7);
+    -fx-border-width: 1;
+    -fx-padding: 4 6 4 6;
+    -fx-effect: dropshadow(gaussian, rgba(168, 50, 121, 0.12), 4, 0.1, 0, 1);
+}
